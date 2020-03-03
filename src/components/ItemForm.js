@@ -1,5 +1,11 @@
 import React, { PureComponent } from 'react';
 
+const editItem = item => {
+  return dispatch => {
+    dispatch({ type: 'EDIT_ITEM', item });
+  };
+};
+
 export default class ItemForm extends PureComponent {
   constructor() {
     super();
@@ -11,10 +17,7 @@ export default class ItemForm extends PureComponent {
 
   static getDerivedStateFromProps (nextProps, prevState) {
     if(nextProps.editItem && nextProps.editItem.id) {
-      console.log("NEXT", nextProps, "PREV", prevState)
-      // this.setState({
-      //   newItem: nextProps.editItem.description
-      // })
+      editItem(nextProps.editItem.description);
     }
   }
 
