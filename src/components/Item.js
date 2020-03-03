@@ -2,17 +2,17 @@ import React, { PureComponent } from 'react';
 
 export default class Item extends PureComponent {
 
-  onChangeCompleteItem = event => {
+  onChangeCompleteItem = e => {
     this.props.onTogglComplete(this.props.item.id);
   };
 
-  onClickEdit = event => {
-    event.preventDefault();
+  onClickEdit = e => {
+    e.preventDefault();
     this.props.onEditItem(this.props.item.id);
   };
 
-  onClickRemove = event => {
-    event.preventDefault();
+  onClickRemove = e => {
+    e.preventDefault();
     this.props.onRemoveItem(this.props.item.id);
   };
 

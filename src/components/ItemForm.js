@@ -19,6 +19,7 @@ export default class ItemForm extends PureComponent {
     if(nextProps.editItem && nextProps.editItem.id) {
       editItem(nextProps.editItem.description);
     }
+    return null;
   }
 
   onSubmit = (event) => {

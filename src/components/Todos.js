@@ -27,12 +27,6 @@ const removeItem = id => {
 
 class Todos extends PureComponent {
 
-  constructor() {
-    super();
-
-    // this.state = { editItem: null }
-  }
-
   onNewItemSubmited = item => {
     this.props.dispatch(addItem(item));
   };
