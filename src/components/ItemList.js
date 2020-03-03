@@ -1,7 +1,7 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PureComponent, PropTypes } from 'react';
 import Item from './Item';
 
-export default class ItemList extends Component {
+export default class ItemList extends PureComponent {
   static propTypes = {
     onTogglComplete: PropTypes.func.isRequired
   }

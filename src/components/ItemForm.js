@@ -1,6 +1,6 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PureComponent, PropTypes } from 'react';
 
-export default class ItemForm extends Component {
+export default class ItemForm extends PureComponent {
   static propTypes = {
     onNewItemSubmited: PropTypes.func.isRequired,
     editItem: PropTypes.shape({id: PropTypes.number.isRequired, description: PropTypes.string.isRequired})
