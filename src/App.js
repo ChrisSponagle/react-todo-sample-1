@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import './App.css';
+import './css/App.css';
 
-import Todos from './Todos';
+import Todos from './components/Todos';
 
 import { Provider } from 'react-redux';
 import { createStore, combineReducers, applyMiddleware } from 'redux';
