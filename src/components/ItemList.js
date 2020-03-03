@@ -1,11 +1,7 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 import Item from './Item';
 
 export default class ItemList extends PureComponent {
-  static propTypes = {
-    onTogglComplete: PropTypes.func.isRequired
-  }
-
 
   render() {
     return(

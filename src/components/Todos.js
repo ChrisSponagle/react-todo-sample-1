@@ -1,4 +1,4 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 import { connect } from 'react-redux';
 
 import ItemForm from './ItemForm';
@@ -26,9 +26,6 @@ const removeItem = id => {
 };
 
 class Todos extends PureComponent {
-  static propTypes = {
-    items: PropTypes.array.isRequired
-  };
 
   constructor() {
     super();

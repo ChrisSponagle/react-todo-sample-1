@@ -1,14 +1,6 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 
 export default class Item extends PureComponent {
-  static propTypes = {
-    item: PropTypes.shape({
-      id: PropTypes.number.isRequired,
-      completed: PropTypes.bool.isRequired
-    }),
-    onEditItem: PropTypes.func.isRequired,
-    onTogglComplete: PropTypes.func.isRequired
-  };
 
   onChangeCompleteItem = event => {
     this.props.onTogglComplete(this.props.item.id);

@@ -1,10 +1,6 @@
-import React, { PureComponent, PropTypes } from 'react';
+import React, { PureComponent } from 'react';
 
 export default class ItemForm extends PureComponent {
-  static propTypes = {
-    onNewItemSubmited: PropTypes.func.isRequired,
-    editItem: PropTypes.shape({id: PropTypes.number.isRequired, description: PropTypes.string.isRequired})
-  }
   constructor() {
     super();
 
@@ -13,11 +9,12 @@ export default class ItemForm extends PureComponent {
     }
   }
 
-  componentWillReceiveProps(nextProps) {
+  static getDerivedStateFromProps (nextProps, prevState) {
     if(nextProps.editItem && nextProps.editItem.id) {
-      this.setState({
-        newItem: nextProps.editItem.description
-      })
+      console.log("NEXT", nextProps, "PREV", prevState)
+      // this.setState({
+      //   newItem: nextProps.editItem.description
+      // })
     }
   }
 
