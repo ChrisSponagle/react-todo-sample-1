@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import '../css/ItemForm.css';
 
 const editItem = item => {
   return dispatch => {
@@ -49,7 +50,7 @@ export default class ItemForm extends PureComponent {
   render() {
     return (
       <form onSubmit={this.onSubmit}>
-        <input type="text" value={this.state.newItem} onChange={this.onDescriptionChange} />
+        <input className='inputTask' type="text" placeholder={"Enter new task"} value={this.state.newItem} onChange={this.onDescriptionChange} />
         <button type="submit" />
       </form>
     )
