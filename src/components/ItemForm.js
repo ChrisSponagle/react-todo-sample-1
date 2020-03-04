@@ -26,15 +26,11 @@ export default class ItemForm extends PureComponent {
   onSubmit = (event) => {
     event.preventDefault();
 
-    if(this.props.editItem) {
-      this.props.onEditItemSubmited({...this.props.editItem, description: this.state.newItem });
-    } else {
       const item = {
         description: this.state.newItem,
         completed: false
       }
       this.props.onNewItemSubmited(item);
-    }
 
     this.setState({
       newItem: ''
@@ -50,8 +46,8 @@ export default class ItemForm extends PureComponent {
   render() {
     return (
       <form className='submitForm' onSubmit={this.onSubmit}>
-        <input className='inputTask' type="text" placeholder={"Enter new task"} value={this.state.newItem} onChange={this.onDescriptionChange} />
-        <div onClick={this.onSubmit} className="submitButton"/>
+        <input className='inputTask' type='text' placeholder={'Enter new task'} value={this.state.newItem} onChange={this.onDescriptionChange} />
+        <div onClick={this.onSubmit} className='submitButton'/>
       </form>
     )
   }

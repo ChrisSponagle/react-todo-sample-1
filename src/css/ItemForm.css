@@ -1,7 +1,6 @@
 .submitForm {
     display: flex;
     justify-content: center;
-    /* margin-top: 2%; */
 }
 .inputTask {
     display: inline-block;
@@ -27,21 +26,13 @@
     margin-left: 2%;
     margin-top: 5%;
 }
+.submitButton:hover {
+    cursor: pointer;
+}
 .submitButton:active {
     opacity: 0.5;
 }
-.submitButton::after {
-    content: " ";
-    position: absolute;
-    display: block;
-    background-color: #fff;
-    height: 4px;
-    margin-top: -2px;
-    top: 50%;
-    left: 7px;
-    right: 9px;
-    z-index: 9;
-}
+/* creates vertical line inside submit button */
 .submitButton::before {
     content: " ";
     position: absolute;
@@ -52,5 +43,18 @@
     left: 51%;
     top: 8px;
     bottom: 9px;
+    z-index: 9;
+}
+/* creates horizontal line inside submit button */
+.submitButton::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    height: 4px;
+    margin-top: -2px;
+    top: 50%;
+    left: 7px;
+    right: 9px;
     z-index: 9;
 }

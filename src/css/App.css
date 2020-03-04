@@ -9,12 +9,10 @@
   height: 66vh;
   overflow: auto;
 }
-
 .appLogo {
   width: 20%;
   margin-bottom: -5%;
 }
-
 .headerFont {
   margin: 0;
   font-family: 'Roboto', sans-serif;
