@@ -75,6 +75,7 @@ class Todos extends PureComponent {
             items={this.props.items}
             onTogglComplete={this.toggleItemCompletion}
             onEditItem={this.startEditItem}
+            onEditItemSubmited={this.onEditItemSubmited}
             onRemoveItem={this.removeItem}
           />
         </div>

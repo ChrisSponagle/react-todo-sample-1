@@ -1,4 +1,10 @@
+.submitForm {
+    display: flex;
+    justify-content: center;
+    /* margin-top: 2%; */
+}
 .inputTask {
+    display: inline-block;
     background: #FFFFFF;
     border: 1px solid #D4D4D4;
     box-sizing: border-box;
@@ -7,4 +13,44 @@
     padding: 1.5%;
     width: 45%;
     margin-top: 5%;
+}
+.submitButton {
+    display: inline-block;
+    border-radius: 5%;
+    width: 37px;
+    height: 37px;
+    background-color: #00FF73;
+    position: relative;
+    border: 1px solid #2ED372;
+    box-sizing: border-box;
+    box-shadow: 0px 2px 0px rgba(0, 0, 0, 0.28);
+    margin-left: 2%;
+    margin-top: 5%;
+}
+.submitButton:active {
+    opacity: 0.5;
+}
+.submitButton::after {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    height: 4px;
+    margin-top: -2px;
+    top: 50%;
+    left: 7px;
+    right: 9px;
+    z-index: 9;
+}
+.submitButton::before {
+    content: " ";
+    position: absolute;
+    display: block;
+    background-color: #fff;
+    width: 4px;
+    margin-left: -3px;
+    left: 51%;
+    top: 8px;
+    bottom: 9px;
+    z-index: 9;
 }

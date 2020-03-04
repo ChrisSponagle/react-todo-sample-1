@@ -49,9 +49,9 @@ export default class ItemForm extends PureComponent {
 
   render() {
     return (
-      <form onSubmit={this.onSubmit}>
+      <form className='submitForm' onSubmit={this.onSubmit}>
         <input className='inputTask' type="text" placeholder={"Enter new task"} value={this.state.newItem} onChange={this.onDescriptionChange} />
-        <button type="submit" />
+        <div onClick={this.onSubmit} className="submitButton"/>
       </form>
     )
   }

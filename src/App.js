@@ -10,7 +10,7 @@ class App extends Component {
     return (
       <div className='App'>
         <div>
-          <img className='appLogo' src={require('./images/tranquilityLogo.png')} />
+          <img className='appLogo' role='presentation' src={require('./images/tranquilityLogo.png')} />
           <h2 className='headerFont'>Tranquility<br/>ToDo App</h2>
         </div>
         <Provider store={store}>
